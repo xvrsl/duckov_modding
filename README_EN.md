@@ -77,15 +77,25 @@ When developing with Unity, you can refer to the [manifest.json file](UnityFiles
 
 ### Custom Game Items
 
-- Call `ItemStatsSystem.ItemAssetsCollection.AddDynamicEntry(Item prefab)` to add custom items
-- Call `ItemStatsSystem.ItemAssetsCollection.RemoveDynamicEntry(Item prefab)` to remove the mod item
+```
+// add custom items
+ItemStatsSystem.ItemAssetsCollection.AddDynamicEntry(Item prefab)
+
+// remove the mod item
+ItemStatsSystem.ItemAssetsCollection.RemoveDynamicEntry(Item prefab)
+```
+
 - Custom item prefabs need to have TypeID configured properly. Avoid conflicts with the base game and other MODs.
 - If the corresponding MOD is not loaded when entering the game, custom items in the save file will disappear directly.
 
 ### Localization
+```
+// override displayed localization text
+SodaCraft.Localizations.LocalizationManager.SetOverrideText(string key, string value)
 
-- Call `SodaCraft.Localizations.LocalizationManager.SetOverrideText(string key, string value)` to override displayed localization text.
-- Use the `SodaCraft.Localizations.LocalizationManager.OnSetLanguage:System.Action<SystemLanguage>` event to handle logic when switching languages
+// handle logic when switching languages
+SodaCraft.Localizations.LocalizationManager.OnSetLanguage:System.Action<SystemLanguage>
+```
 
 ## Duckov Community Rules
 
@@ -94,6 +104,5 @@ To aid the long-term development of the Duckov community, we ask everyone to con
 2. Content that severely insults characters, distorts the story, or aims to cause discomfort, conflict, or controversy in the player community is prohibited. This also includes content related to current events or real-life individuals that may trigger real-world disputes.
 3. Unauthorized use of copyrighted game assets or other third-party materials is prohibited.
 4. Mods must not be used to direct players to advertisements, fundraising, payment requests, or other commercial or unofficial external links.
-5. Mods containing AI-generated content must be clearly labeled.
+5. Mods containing AI-generated content must be clearly labeled.  
 For mods published on Steam Workshop, any violations of the above rules may result in removal without prior notice and may lead to suspension of the creator’s permissions.
-

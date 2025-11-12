@@ -2,7 +2,7 @@
 
 _Escape From Duckov 모딩을 위한 예제 프로젝트입니다._
 
-[中文](README.md) | [English](README_EN.md) | [한국어](README_KO.md)
+[中文](README.md) | [English](README_EN.md) | 한국어
 
 [주요 API 문서](Documents/NotableAPIs.md)
 
