@@ -17,8 +17,14 @@
 
     </PropertyGroup>
     <ItemGroup>
-        <Reference Include="$(DuckovPath)$(SubPath)TeamSoda.*"/>
-        <Reference Include="$(DuckovPath)$(SubPath)ItemStatsSystem.dll"/>
-        <Reference Include="$(DuckovPath)$(SubPath)Unity*"/>
+        <Reference Include="$(DuckovPath)$(SubPath)TeamSoda.*">
+	      <Private>False</Private>
+	    </Reference>
+        <Reference Include="$(DuckovPath)$(SubPath)ItemStatsSystem.dll">
+	      <Private>False</Private>
+	    </Reference>
+        <Reference Include="$(DuckovPath)$(SubPath)Unity*">
+	      <Private>False</Private>
+	    </Reference>
     </ItemGroup>
 </Project>
