@@ -25,6 +25,14 @@ namespace DisplayItemValue
         }
         void Awake()
         {
+            /*
+            macOS:
+                ~/Library/Logs/TeamSoda/Duckov/Player.log       # Current session log
+                ~/Library/Logs/TeamSoda/Duckov/Player-prev.log  # Previous session log (auto-backup)
+            Windows:
+                C:\Users\<YourUsername>\AppData\LocalLow\TeamSoda\Duckov\Player.log
+                C:\Users\<YourUsername>\AppData\LocalLow\TeamSoda\Duckov\Player-prev.log
+            */
             Debug.Log("DisplayItemValue Loaded!!!");
         }
         void OnDestroy()
