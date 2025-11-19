@@ -130,3 +130,40 @@ SodaCraft.Localizations.LocalizationManager.OnSetLanguage:System.Action<SystemLa
 4. 禁止利用 Mod 引导至广告、募捐等商业或非官方性质的外部链接，或引导他人付费的行为。
 5. 使用AI内容的 Mod 需要标注。  
 对于在 Steam创意工坊发布的 Mod，如果违反上述规则，我们可能会在不事先通知的情况下直接删除，并可能封禁相关创作者的权限。
+
+## 社区贡献
+
+> **免责声明：** 此部分内容非官方提供。用户应自行承担使用这些内容的风险。
+
+### Ducky.Sdk - 现代化的 Mod 开发框架
+
+社区开发者创建了 [Ducky.Sdk](https://www.nuget.org/packages/Ducky.Sdk)，这是一个功能完善的 Mod 开发 SDK，可以大幅简化开发流程：
+
+**主要特性：**
+- 🎯 **简化配置**：自动化的项目配置和依赖管理
+- 🌍 **本地化支持**：内置多语言本地化系统，支持 CSV 和 Markdown 翻译文件
+- 📦 **依赖打包**：自动处理第三方 NuGet 包依赖
+- 🔄 **自动部署**：构建后自动部署到游戏目录
+- 🛠️ **代码分析**：内置分析器帮助避免常见错误
+
+**快速开始：**
+
+参考 [Ducky.Sdk 示例项目集合](https://github.com/ducky7go/Ducky.Samples)，包含从入门到高级的完整示例：
+
+- **入门级**：[Ducky.SingleProject](https://github.com/ducky7go/Ducky.Samples/tree/main/Ducky.SingleProject) - 最简单的 Mod 结构
+- **进阶级**：[Ducky.Localization](https://github.com/ducky7go/Ducky.Samples/tree/main/Ducky.Localization) - 多语言本地化系统
+- **高级级**：[Ducky.TryHarmony](https://github.com/ducky7go/Ducky.Samples/tree/main/Ducky.TryHarmony) - 运行时代码注入
+
+```bash
+# 使用 Ducky.Sdk 创建项目只需配置：
+<PropertyGroup>
+  <TargetFramework>netstandard2.1</TargetFramework>
+  <ModName>YourModName</ModName>
+</PropertyGroup>
+
+<ItemGroup>
+  <PackageReference Include="Ducky.Sdk" Version="*" />
+</ItemGroup>
+```
+
+详细文档请查看 [Ducky.Samples 仓库](https://github.com/ducky7go/Ducky.Samples)。
