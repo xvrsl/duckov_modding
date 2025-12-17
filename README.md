@@ -8,7 +8,7 @@ _《逃离鸭科夫》的 mod 示例说明。_
 
 ## 关于Harmony
 
-游戏目前没有内置 Harmony。观察到同时加载不同版本 Harmony 时会有冲突。可以参考社区中比较流行的 Harmony 来进行开发，比如撰写此文时最新的2.4.1版本。
+游戏目前没有内置 Harmony。但观察到同时加载不同版本 Harmony 时会有冲突，可以参考社区中比较流行的 Harmony 来进行开发，比如文档编写时的 **Harmony 2.4.1** 版本。
 
 ## 工作原理概述
 
@@ -41,11 +41,11 @@ mod 的 ModBehaviour 类应继承自 **Duckov.Modding.ModBehaviour**，这是一
 - displayName（显示的名称）
 - description（显示的描述）
 - publishedFileId（_可能包含_。本 Mod 在 steam 创意工坊的 id）
-- tags (在创意工坊中显示的Tag, 使用逗号分隔)
+- tags（在创意工坊中显示的Tag，使用英文逗号分隔）
 
 **注意：在上传 Steam Workshop 的时候，会复写 info.ini。配置文件中部分数据可能会因此丢失。所以不建议在 info.ini 中存储除以上项目之外的其他信息。**
 
-#### Tags可以使用的参数
+#### tags 可用参数
 
 - Weapon
 - Equipment & Gear
@@ -61,12 +61,8 @@ mod 的 ModBehaviour 类应继承自 **Duckov.Modding.ModBehaviour**，这是一
 - Multiplayer & Co-op
 - Utility
 - Medical & Survival
-- 
+
 ## 配置 C# 工程
-
-**注意：在上传 Steam Workshop 的时候，会复写 info.ini。info.ini 中原有的信息可能会因此丢失。所以不建议在 info.ini 中存储除以上项目之外的其他信息。**
-
-## 配置 C# 工程 / Configuring C# Project
 
 1. 在电脑上准备好《逃离鸭科夫》本体。
 2. 通过 Visual Studio 软件创建一个 .Net 类库（Class Library）。
@@ -125,8 +121,9 @@ SodaCraft.Localizations.LocalizationManager.OnSetLanguage:System.Action<SystemLa
 
 为了鸭科夫社区的长期健康与和谐发展，我们需要共同维护良好的创作环境。 因此，我们希望大家遵守以下规则：
 1. 禁止违反开发组以及 Steam平台所在地区法律的内容，禁止涉及政治、散布淫秽色情、宣扬暴力恐怖的内容。
-2. 禁止严重侮辱角色或者扭曲剧情、意图在玩家社群内容引起反感和制造对立的内容，或者涉及到热门时事与现实人物等容易引发现实争议的内容。
-3. 禁止未经授权，使用受版权保护的游戏资源或其他第三方素材的内容。
-4. 禁止利用 Mod 引导至广告、募捐等商业或非官方性质的外部链接，或引导他人付费的行为。
-5. 使用AI内容的 Mod 需要标注。  
+2. 禁止对玩家正常游戏流程、存档安全或社区秩序存在损害的行为，或其他形式的恶意代码。
+3. 禁止严重侮辱角色或者扭曲剧情、意图在玩家社群内容引起反感和制造对立的内容，或者涉及到热门时事与现实人物等容易引发现实争议的内容。
+4. 禁止未经授权，使用受版权保护的游戏资源或其他第三方素材的内容。
+5. 禁止利用 Mod 引导至广告、募捐等商业或非官方性质的外部链接，或引导他人付费的行为。
+6. 使用AI内容的 Mod 需要标注。  
 对于在 Steam创意工坊发布的 Mod，如果违反上述规则，我们可能会在不事先通知的情况下直接删除，并可能封禁相关创作者的权限。
