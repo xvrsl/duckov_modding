@@ -115,3 +115,40 @@ Duckov 커뮤니티의 장기적인 발전을 돕기 위해 모든 분들께 긍
 4. 모드는 플레이어를 광고, 모금, 결제 요청 또는 기타 상업적 또는 비공식 외부 링크로 유도하는 데 사용해서는 안 됩니다.
 5. AI 생성 콘텐츠를 포함하는 모드는 명확하게 표시되어야 합니다.
    Steam 창작마당에 게시된 모드의 경우 위 규칙을 위반하면 사전 통보 없이 제거될 수 있으며 제작자의 권한이 정지될 수 있습니다.
+
+## 커뮤니티 기여
+
+> **면책 조항:** 이 부분은 공식적으로 제공되지 않습니다. 사용자는 자신의 책임 하에 이 콘텐츠를 참조하고 사용해야 합니다.
+
+### Ducky.Sdk - 현대적인 모드 개발 프레임워크
+
+커뮤니티 개발자들이 [Ducky.Sdk](https://www.nuget.org/packages/Ducky.Sdk)를 만들었습니다. 이는 개발 프로세스를 크게 단순화하는 포괄적인 모드 개발 SDK입니다:
+
+**주요 기능:**
+- 🎯 **간소화된 구성**: 자동화된 프로젝트 구성 및 종속성 관리
+- 🌍 **로컬라이제이션 지원**: CSV 및 Markdown 번역 파일을 지원하는 내장 다국어 로컬라이제이션 시스템
+- 📦 **종속성 패키징**: 타사 NuGet 패키지 종속성 자동 처리
+- 🔄 **자동 배포**: 빌드 후 게임 디렉토리에 자동 배포
+- 🛠️ **코드 분석**: 내장 분석기로 일반적인 실수 방지
+
+**빠른 시작:**
+
+초급부터 고급까지의 완전한 예제가 포함된 [Ducky.Sdk 샘플 프로젝트](https://github.com/ducky7go/Ducky.Samples)를 참조하세요:
+
+- **초급**: [Ducky.SingleProject](https://github.com/ducky7go/Ducky.Samples/tree/main/Ducky.SingleProject) - 가장 간단한 모드 구조
+- **중급**: [Ducky.Localization](https://github.com/ducky7go/Ducky.Samples/tree/main/Ducky.Localization) - 다국어 로컬라이제이션 시스템
+- **고급**: [Ducky.TryHarmony](https://github.com/ducky7go/Ducky.Samples/tree/main/Ducky.TryHarmony) - 런타임 코드 인젝션
+
+```bash
+# Ducky.Sdk로 프로젝트를 만들려면 다음만 필요합니다:
+<PropertyGroup>
+  <TargetFramework>netstandard2.1</TargetFramework>
+  <ModName>YourModName</ModName>
+</PropertyGroup>
+
+<ItemGroup>
+  <PackageReference Include="Ducky.Sdk" Version="*" />
+</ItemGroup>
+```
+
+자세한 문서는 [Ducky.Samples 저장소](https://github.com/ducky7go/Ducky.Samples)를 참조하세요.

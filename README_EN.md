@@ -123,3 +123,40 @@ To aid the long-term development of the Duckov community, we ask everyone to con
 4. Mods must not be used to direct players to advertisements, fundraising, payment requests, or other commercial or unofficial external links.
 5. Mods containing AI-generated content must be clearly labeled.  
 For mods published on Steam Workshop, any violations of the above rules may result in removal without prior notice and may lead to suspension of the creator’s permissions.
+
+## Community Contributions
+
+> **Disclaimer:** This part is not provided officially. Users should reference and use these content at their own risk.
+
+### Ducky.Sdk - Modern Mod Development Framework
+
+Community developers have created [Ducky.Sdk](https://www.nuget.org/packages/Ducky.Sdk), a comprehensive Mod development SDK that greatly simplifies the development process:
+
+**Key Features:**
+- 🎯 **Simplified Configuration**: Automated project configuration and dependency management
+- 🌍 **Localization Support**: Built-in multi-language localization system with CSV and Markdown translation files
+- 📦 **Dependency Packaging**: Automatic handling of third-party NuGet package dependencies
+- 🔄 **Auto Deployment**: Automatically deploy to game directory after build
+- 🛠️ **Code Analysis**: Built-in analyzers help avoid common mistakes
+
+**Quick Start:**
+
+Refer to [Ducky.Sdk Sample Projects](https://github.com/ducky7go/Ducky.Samples), which includes complete examples from beginner to advanced:
+
+- **Beginner**: [Ducky.SingleProject](https://github.com/ducky7go/Ducky.Samples/tree/main/Ducky.SingleProject) - Simplest Mod structure
+- **Intermediate**: [Ducky.Localization](https://github.com/ducky7go/Ducky.Samples/tree/main/Ducky.Localization) - Multi-language localization system
+- **Advanced**: [Ducky.TryHarmony](https://github.com/ducky7go/Ducky.Samples/tree/main/Ducky.TryHarmony) - Runtime code injection
+
+```bash
+# Creating a project with Ducky.Sdk only requires:
+<PropertyGroup>
+  <TargetFramework>netstandard2.1</TargetFramework>
+  <ModName>YourModName</ModName>
+</PropertyGroup>
+
+<ItemGroup>
+  <PackageReference Include="Ducky.Sdk" Version="*" />
+</ItemGroup>
+```
+
+For detailed documentation, visit the [Ducky.Samples repository](https://github.com/ducky7go/Ducky.Samples).
